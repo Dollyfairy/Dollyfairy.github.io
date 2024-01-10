@@ -1,0 +1,46 @@
+.process {
+    background-color: var(--bg-color);
+    text-align: center;
+    height: 650px;
+}
+
+.process h2{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+
+.process-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.process-item {
+    padding: 40px 30px;
+    /* width: 330px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.process p {
+    font-size: 18px;
+}
+
+.process button {
+    color: white;  /* 文字顏色，可根據需要調整 */
+    background-color: var(--primary-color);
+    padding: 10px 50px;
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+.process button:hover {
+    background:  var(--third-color);
+    cursor: url('/image/cursors/pointer.cur'), auto;
+}
+
+

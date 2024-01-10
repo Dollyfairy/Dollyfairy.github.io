@@ -1,0 +1,115 @@
+
+.service {
+    background-image: url('/image/bg_service.png'); /* 設定背景圖片 */
+    background-size: cover;
+    padding-bottom: 50px;
+    text-align: center;
+    /* height: 650px; */
+}
+.marker {
+    background: 
+    linear-gradient( 
+        to top, 
+        var(--primary-color) 40%,
+        rgba(0, 0, 0 , 0) 0);
+    display: inline-block;
+    text-align: center;
+}
+
+.service .marker {
+    background: 
+    linear-gradient( 
+        to top, 
+        white 40%,
+        rgba(0, 0, 0 , 0) 0);
+}
+.service h2{
+    /* margin: 180px 0; */
+    margin-top: 180px;
+    margin-bottom: 80px;
+    color: var(--primary-color);
+}
+
+.service-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.service-item {
+    border-radius: 10px;
+    padding: 40px 30px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    
+    transition: background-color 0.3s ease; /* 平滑過渡背景顏色效果 */
+    transition: transform 0.3s ease; /* 添加過渡效果，使移動更平滑 */
+}
+
+.service img {
+    padding-bottom: 10px;
+}
+
+.service-item:hover img {
+    animation: shake 0.5s ease; /* 使用 shake 動畫，無限循環 */
+    
+}
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    
+}
+
+.service-item:hover {
+    background-color: #FFEEE1;
+    transform: translateY(-5px); /* 在懸停時向上移動5px */
+    box-shadow: 0px 18px 30px 0px rgba(236, 135, 62, 0.31);
+    cursor: url('/image/cursors/pointer.cur'), auto;
+}
+
+
+.service-title {
+    background: white;
+    padding: 0 12px;
+    border-radius: 10px;
+    color: var(--primary-color);
+    height: 40px;
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+.service-num {
+    font-weight: bold;
+    text-align: center; /* 水平置中 */
+    
+}
+.service-num span{
+    font-family: 'Zen Maru Gothic', serif;
+    display: block;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+
+.service p {
+    margin: 0;
+    text-align: center
+}

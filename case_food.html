@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Box包裝盒</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Noto+Sans+TC:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet" />
+
+    <!--連結Font Awesome檔案-->
+    <script src="https://kit.fontawesome.com/d170b93390.js" crossorigin="anonymous"></script>
+    <!--連結CSS檔案-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/service.css" />
+    <link rel="stylesheet" href="/css/process.css" />
+    <link rel="stylesheet" href="/css/new.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-logo">
+                    <img src="./image/allbox_logo.png" alt="allbox_logo" class="allbox-logo" />
+                    <a href="/"><img src="./image/brand_name.png" alt="brand_name" class="brand_name" /></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>商店</li>
+                    <li>服務項目</li>
+                    <li>所有盒型</li>
+                    <li>我要客製化</li>
+                    <li><a href="./case_food.html">客製化案例</a></li>
+                    <li>最新消息</li>
+                    <li>常見問題</li>
+                </ul>
+            </nav>
+            <div class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <button>登入/註冊</button>
+            </div>
+        </header>
+
+
+        <section class="case">
+            <h2 class="marker">食品分類</h2>
+            
+            <div class="case-wrap" id="case-wrap">
+                <div class="sub-heading">客製化案例 > 食品分類</div>
+                
+            </div>
+        </section>
+
+        <script>
+            // 文字內容
+            const csvContent = `
+                甜點架式－英式皇家司康,展示盒三層對裱,白牛皮滿版雙面印+燙金
+                白飯大盜－手工干貝醬,書型盒,牛皮紙+彩色印刷
+                雙面美人－東方美人茶,書型盒,黑卡紙+燙金
+                妞新聞－鳳梨酥,天地盒,材質：白卡+彩色印刷
+                王品餐飲－乳酪蛋糕,天地盒,白卡彩色印刷 +霧膜
+                棗稻田－米蛋捲,抽屜盒,白卡+彩色印刷
+                日沐茶食－茶葉與蔬果脆片,手提盒,牛皮
+                果然微醺－微醺果酒,提繩手提紙盒,白卡550P+大豆環保油墨
+            
+            `;
+        
+            const csvRows = csvContent.trim().split('\n').map(row => row.split(','));
+        
+            const caseContainer = document.getElementById('case-wrap');
+        
+            csvRows.forEach((row, index) => {
+                const caseItem = document.createElement('div');
+                caseItem.classList.add('case-item');
+        
+                const img = document.createElement('img');
+                img.src = `./image/case/${index + 1}.png`;
+        
+                const title = document.createElement('p');
+                title.classList.add('title');
+                title.textContent = row[0];
+        
+                const boxType = document.createElement('p');
+                boxType.textContent = `盒型：${row[1]}`;
+        
+                const material = document.createElement('p');
+                material.textContent = `材質：${row[2]}`;
+        
+                caseItem.appendChild(img);
+                caseItem.appendChild(title);
+                caseItem.appendChild(boxType);
+                caseItem.appendChild(material);
+        
+                caseContainer.appendChild(caseItem);
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+@import "color.css";
+
+html, body {
+    font-family: 'Noto Sans TC', sans-serif;
+    /* font-family: 'Zen Maru Gothic', serif; */
+    margin: unset;
+    line-height: 200%;
+    letter-spacing: 0.1em;
+    cursor: url('/image/cursors/left_ptr.cur'),auto;
+}
+
+
+a {
+    text-decoration: none; /* 移除下劃線 */
+    color: inherit; /* 使用父元素的文字顏色 */
+    cursor: auto; /* 還原為預設游標 */
+    outline: none; /* 移除點擊時的輪廓效果 */
+}
+a:hover{
+    cursor: url('/image/cursors/pointer.cur'), auto;
+}
+/*---------------------------*/
+/* 編排<容器>區塊             */
+/*---------------------------*/
+div.container {
+    width: auto;
+    margin: auto;
+    font-weight: bold;
+    
+}
+
+header * {
+    font-size: 16px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: box-shadow 0.3s ease; /* 添加過渡效果 */
+
+    padding: 10px 0;
+    background-color: var(--bg-color);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 999;
+}
+
+button {
+    font-family: 'Noto Sans TC', sans-serif;
+    border-radius: 10px;  /* 圓角為10px */
+    border: none;  /* 移除按鈕的邊框 */
+    letter-spacing: 0.1em;
+
+}
+
+/*---------------------------*/
+/* header-brand-name -------------------- */
+.nav-logo {
+    display: inline-flex;
+    gap: 14px;
+    align-items: center; /* 垂直置中 */
+    height: 80%;
+    
+    
+}
+/* logo圖-------------------- */
+.nav-logo .allbox-logo{
+    max-height: 100%; /* 设置最大高度为父元素高度，保持宽高比例 */
+    
+}
+/* 品牌名-------------------- */
+.nav-logo .brand-name{
+    height: 20px;
+    /* cursor: url('/image/cursors/pointer.cur'), auto; */
+    
+}
+
+.nav-logo a{
+    cursor: url('/image/cursors/pointer.cur'), auto;
+}
+
+/*---------------------------*/
+/* 導覽列 -------------------- */
+nav {
+    display: inline-flex;
+    align-items: center; /*垂直置中*/
+    font-weight: bold;
+}
+nav ul{
+    padding: 0;
+    display: inline-flex;
+    gap: 28px;
+}
+
+nav ul li:hover {
+    color: var(--primary-color);
+    cursor: url('/image/cursors/pointer.cur'), auto;
+    
+}
+
+ul li {
+    height: 100%;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li::before,
+nav ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--primary-color); /* 底線的顏色 */
+    transition: width 0.3s ease; /* 添加過渡效果，可調整時間和過渡函數 */
+}
+
+nav ul li:hover::before,
+nav ul li:hover::after {
+    width: 100%; /* 底線的寬度，這裡設置為 50% 表示同時從中間往左和中間往右增加寬度 */
+}
+
+nav ul li::before {
+    left: 50%; /* 左邊的底線 */
+    transform: translateX(-50%);
+}
+
+nav ul li::after {
+    right: 50%; /* 右邊的底線 */
+    transform: translateX(50%);
+}
+
+/* 導覽列 -------------------- */
+/*---------------------------*/
+.nav-cart {
+    display: inline-flex;
+    gap: 24px;
+    align-items: center; /* 垂直置中 */
+    height: 100%; /* 高度與父元素相同 */
+}
+
+.nav-cart i {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.nav-cart i:hover {
+    color: var(--third-color);
+    cursor: url('/image/cursors/pointer.cur'), auto;
+
+}
+
+.nav-cart button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 12px;
+    background-color: var(--primary-color);
+    height: 42px;
+    border-radius: 10px;  /* 圓角為10px */
+    
+    color: white;  /* 文字顏色，可根據需要調整 */
+    padding: 12px;
+}
+
+.nav-cart button:hover {
+    background:  var(--third-color);
+    cursor: url('/image/cursors/pointer.cur'), auto;
+}
+
+
+mark1 {
+    background: 
+    linear-gradient(  /* 下到上 */
+        to top,
+        var(--bg-color) 5%, 
+        #F1B9A4 50%,
+        rgba(0, 0, 0 , 0) 0);
+}
+mark2 {
+    background: 
+    linear-gradient(  /* 下到上 */
+        to top,
+        var(--bg-color) 5%, 
+        #F3C19E 50%,
+        rgba(0, 0, 0 , 0) 0);
+}
+mark3 {
+    background: 
+    linear-gradient(  /* 下到上 */
+        to top,
+        var(--bg-color) 5%, 
+        #C7DDE3 50%,
+        rgba(0, 0, 0 , 0) 0);
+}
+
+
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平置中 */
+    text-align: center; /* 文字水平置中 */
+    padding-top: 30px;
+    background-color: var(--bg-color);
+
+}
+.banner p.slogan {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 180%;
+}
+
+.banner p.desc {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.sub-heading {
+    position: absolute;
+    top:-20px;
+    left: 0;
+    
+}
+
+.case {
+    background-color: var(--bg-color);
+    text-align: center;
+    height: auto;
+    padding-bottom: 100px;
+    
+}
+
+.case h2{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+
+.case-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    gap: 40px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* 將 .case-wrap 置中 */
+    flex-wrap: wrap;
+    padding: 50px 0;
+    
+}
+
+.case-item {
+    /* padding: 0px 20px; */
+    padding-bottom: 30px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    transition: box-shadow 0.3s ease; 
+    
+}
+
+.case-item:hover{
+    box-shadow: 0px 18px 30px 0px rgba(146, 139, 134, 0.31);
+    cursor: url('/image/cursors/pointer.cur'), auto;
+}
+
+.case-item img {
+    width: 100%
+}
+
+.case-item .title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    margin: 20px;
+}
+
+.case p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #545454;
+    margin: 0;
+}

@@ -1,0 +1,63 @@
+.news {
+    background-image: url('/image/bg_news.png'); /* 設定背景圖片 */
+    background-size: cover;
+    /* text-align: center; */
+    height: 650px; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 將表格垂直置中 */
+}
+
+.news h2{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.news-wrap {
+    padding-bottom: 60px;
+    background: white;
+    border-radius: 10px;
+    /* box-shadow: 0px 3px 4.667px -1.333px rgba(196, 159, 130, 0.199); */
+    /* box-shadow: 0px 3px 10px 0px rgba(238, 152, 91, 0.31); */
+    box-shadow: 0px 10px 30px 0px rgba(177, 171, 166, 0.123);
+    position: relative;
+
+}
+
+.news table {
+    padding: 20px;
+    /* background: white; */
+    /* border-radius: 10px;
+    box-shadow: 0px 5.333px 4.667px -1.333px rgba(220, 193, 172, 0.25); */
+}
+
+.news td{
+    padding: 20px;
+}
+
+.news td:hover{
+    padding: 20px;
+    cursor: url('/image/cursors/pointer.cur'), auto;
+}
+
+.news .tag span{
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.news button {
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    right: 35px;
+    background: none;
+    height: 32px;
+}
+
+.news button:hover {
+    cursor: url('/image/cursors/pointer.cur'), auto;
+    background: var(--bg-color)
+}
